@@ -10,9 +10,9 @@ Overview
 ========
 
 This repository contains the LaTeX source files for a guest lecture written by
-Jamie Oaks for a Biogeography course (BIO 470) taught by [John
-Klicka](http://klickalab.com/john-klicka/) at the [University of
-Washington](http://www.washington.edu/).
+[Jamie Oaks](http://www.phyletica.com) for a Biogeography course (BIO 470)
+taught by [John Klicka](http://klickalab.com/john-klicka/) at the [University
+of Washington](http://www.washington.edu/).
 
 
 Acknowledgements

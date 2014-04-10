@@ -37,6 +37,80 @@
     \frametitle{Acknowledgements}
 \end{frame}
 
+\begin{frame}
+    \frametitle{Bergmann's Rule}
+    \begin{columns}[c]
+        \column{.5\textwidth}
+            \begin{onlyenv}<1->
+            \begin{center}
+            \begin{tikzpicture}
+            [scale=0.35,auto=left,every node/.style={circle}]%,fill=blue!20}]
+              \draw [<->,thick] (0,10) -- (0,0) -- (14,0);
+              \node [label=below: {\sffamily Latitude}](xl) at (7.5,0.5) {};
+              \node [label=left: {\sffamily Mass}](yl) at (0,5) {};
+              \node [inode, label={[label distance=-5pt]0:\small\sffamily\bfseries A}](a) at (1,1) {};
+              \node [inode, label={[label distance=-5pt]0:\small\sffamily\bfseries B}](d) at (2.5,0.8) {};
+              \node [inode, label={[label distance=-5pt]0:\small\sffamily\bfseries C}](c) at (2,2.5) {};
+              \node [inode, color=blue, label={[label distance=-5pt]0:\small\sffamily\bfseries D}](e) at (7,7.5) {};
+              \node [inode, color=blue, label={[label distance=-5pt]0:\small\sffamily\bfseries E}](f) at (8.1,9.1) {};
+              \node [inode, color=blue, label={[label distance=-5pt]0:\small\sffamily\bfseries F}](b) at (10,10) {};
+            
+            \end{tikzpicture}
+            \end{center}
+            \end{onlyenv}
+        \column{.5\textwidth}
+            \begin{onlyenv}<2>
+            \begin{center}
+            \begin{tikzpicture}
+            [scale=0.35,auto=left,every node/.style={circle}]%,fill=blue!20}]
+              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (1, 7) {};
+              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](b) at (3, 7) {};
+              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (5, 7) {};
+              \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (7, 7) {};
+              \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](e) at (9, 7) {};
+              \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](f) at (11, 7) {};
+
+              \draw [very thick] (a) -- (3,5) -- (4,6) -- (c);
+              \draw [very thick] (4,6) -- (3.5, 6.5);
+              \draw [very thick] (3.5, 6.5) -- (b);
+              \draw [very thick, draw=blue] (d) -- (9,5) -- (10,6) -- (f);
+              \draw [very thick, draw=blue] (10,6) -- (9.5, 6.5);
+              \draw [very thick, draw=blue] (9.5, 6.5) -- (e);
+              \draw [very thick] (3,5) -- (6,-4) -- (7.5, 0.5);
+              \draw [very thick, draw=blue] (7.5, 0.5) -- (9, 5);
+              \draw [very thick] (6,-4) -- (6, -5);
+            
+            \end{tikzpicture}
+            \end{center}
+            \end{onlyenv}
+
+            \begin{onlyenv}<3>
+            \begin{center}
+            \begin{tikzpicture}
+            [scale=0.35,auto=left,every node/.style={circle}]%,fill=blue!20}]
+              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (1, 7) {};
+              \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](b) at (3, 7) {};
+              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (5, 7) {};
+              \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (7, 7) {};
+              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](e) at (9, 7) {};
+              \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](f) at (11, 7) {};
+
+              \draw [very thick] (a) -- (3,5) -- (4,6) -- (c);
+              \draw [very thick] (4,6) -- (3.5, 6.5);
+              \draw [very thick, draw=blue] (3.5, 6.5) -- (b);
+              \draw [very thick, draw=blue] (d) -- (9,5) -- (10,6) -- (f);
+              \draw [very thick, draw=blue] (10,6) -- (9.5, 6.5);
+              \draw [very thick] (9.5, 6.5) -- (e);
+              \draw [very thick] (3,5) -- (6,-4) -- (7.5, 0.5);
+              \draw [very thick, draw=blue] (7.5, 0.5) -- (9, 5);
+              \draw [very thick] (6,-4) -- (6, -5);
+            
+            \end{tikzpicture}
+            \end{center}
+            \end{onlyenv}
+    \end{columns}
+\end{frame}
+
 % what is phylogenetics
 % why phylogenetics is important
 %     nothing in biology dob quote

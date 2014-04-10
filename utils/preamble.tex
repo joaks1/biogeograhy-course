@@ -14,6 +14,14 @@
 \newrobustcmd*{\footlessfullcite}{\AtNextCite{\renewbibmacro{title}{}\renewbibmacro{in:}{}}\footfullcite}
 \AtEveryBibitem{\clearfield{month}}
 \AtEveryCitekey{\clearfield{month}}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{centered} = [align=center, text centered, font=\sffamily\bfseries]
+\tikzstyle{skip} = [centered, circle, inner sep=0pt, outer sep=0pt, radius=0pt, fill]
+\tikzstyle{empty} = [centered, inner sep=0pt]
+\tikzstyle{inode} = [centered, circle, minimum width=4pt, fill=black, inner sep=0pt]
+\tikzstyle{tnode} = [centered, circle, inner sep=1pt]
+
 
 \usepackage{hyperref}
 \hypersetup{pdfborder={0 0 0}, colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=blue}

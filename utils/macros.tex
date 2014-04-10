@@ -1,6 +1,9 @@
 % \newcommand{\change}[1]{{\color{blue} #1}\xspace}
 \newcommand{\change}[1]{{\color{black} #1}\xspace}
 
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
 
 \newcommand{\citationNeeded}{\textcolor{magenta}{\textbf{[CITATION NEEDED!]}}\xspace}
 \newcommand{\tableNeeded}{\textcolor{magenta}{\textbf{[TABLE NEEDED!]}}\xspace}

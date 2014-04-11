@@ -42,71 +42,71 @@
     \begin{columns}[c]
         \column{.5\textwidth}
             \begin{onlyenv}<1->
-            \begin{center}
-            \begin{tikzpicture}
-            [scale=0.35,auto=left,every node/.style={circle}]%,fill=blue!20}]
-              \draw [<->,thick] (0,10) -- (0,0) -- (14,0);
-              \node [label=below: {\sffamily Latitude}](xl) at (7.5,0.5) {};
-              \node [label=left: {\sffamily Mass}](yl) at (0,5) {};
-              \node [inode, label={[label distance=-5pt]0:\small\sffamily\bfseries A}](a) at (1,1) {};
-              \node [inode, label={[label distance=-5pt]0:\small\sffamily\bfseries B}](d) at (2.5,0.8) {};
-              \node [inode, label={[label distance=-5pt]0:\small\sffamily\bfseries C}](c) at (2,2.5) {};
-              \node [inode, color=blue, label={[label distance=-5pt]0:\small\sffamily\bfseries D}](e) at (7,7.5) {};
-              \node [inode, color=blue, label={[label distance=-5pt]0:\small\sffamily\bfseries E}](f) at (8.1,9.1) {};
-              \node [inode, color=blue, label={[label distance=-5pt]0:\small\sffamily\bfseries F}](b) at (10,10) {};
-            
-            \end{tikzpicture}
-            \end{center}
+                \begin{center}
+                    \begin{tikzpicture}
+                    [scale=0.35,auto=left,every node/.style={circle}]%,fill=blue!20}]
+                        \draw [<->,thick] (0,10) -- (0,0) -- (14,0);
+                        \node [label=below: {\sffamily Latitude}](xl) at (7.5,0.5) {};
+                        \node [label=left: {\sffamily Mass}](yl) at (0,5) {};
+                        \node [inode, label={[label distance=-5pt]0:\small\sffamily\bfseries A}](a) at (1,1) {};
+                        \node [inode, label={[label distance=-5pt]0:\small\sffamily\bfseries B}](d) at (2.5,0.8) {};
+                        \node [inode, label={[label distance=-5pt]0:\small\sffamily\bfseries C}](c) at (2,2.5) {};
+                        \node [inode, color=blue, label={[label distance=-5pt]0:\small\sffamily\bfseries D}](e) at (7,7.5) {};
+                        \node [inode, color=blue, label={[label distance=-5pt]0:\small\sffamily\bfseries E}](f) at (8.1,9.1) {};
+                        \node [inode, color=blue, label={[label distance=-5pt]0:\small\sffamily\bfseries F}](b) at (10,10) {};
+                    
+                    \end{tikzpicture}
+                \end{center}
             \end{onlyenv}
         \column{.5\textwidth}
             \begin{onlyenv}<2>
-            \begin{center}
-            \begin{tikzpicture}
-            [scale=0.35,auto=left,every node/.style={circle}]%,fill=blue!20}]
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (1, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](b) at (3, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (5, 7) {};
-              \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (7, 7) {};
-              \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](e) at (9, 7) {};
-              \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](f) at (11, 7) {};
-
-              \draw [very thick] (a) -- (3,5) -- (4,6) -- (c);
-              \draw [very thick] (4,6) -- (3.5, 6.5);
-              \draw [very thick] (3.5, 6.5) -- (b);
-              \draw [very thick, draw=blue] (d) -- (9,5) -- (10,6) -- (f);
-              \draw [very thick, draw=blue] (10,6) -- (9.5, 6.5);
-              \draw [very thick, draw=blue] (9.5, 6.5) -- (e);
-              \draw [very thick] (3,5) -- (6,-4) -- (7.5, 0.5);
-              \draw [very thick, draw=blue] (7.5, 0.5) -- (9, 5);
-              \draw [very thick] (6,-4) -- (6, -5);
-            
-            \end{tikzpicture}
-            \end{center}
+                \begin{center}
+                    \begin{tikzpicture}
+                    [scale=0.35,auto=left,every node/.style={circle}]%,fill=blue!20}]
+                        \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (1, 7) {};
+                        \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](b) at (3, 7) {};
+                        \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (5, 7) {};
+                        \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (7, 7) {};
+                        \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](e) at (9, 7) {};
+                        \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](f) at (11, 7) {};
+          
+                        \draw [very thick] (a) -- (3,5) -- (4,6) -- (c);
+                        \draw [very thick] (4,6) -- (3.5, 6.5);
+                        \draw [very thick] (3.5, 6.5) -- (b);
+                        \draw [very thick, draw=blue] (d) -- (9,5) -- (10,6) -- (f);
+                        \draw [very thick, draw=blue] (10,6) -- (9.5, 6.5);
+                        \draw [very thick, draw=blue] (9.5, 6.5) -- (e);
+                        \draw [very thick] (3,5) -- (6,-4) -- (7.5, 0.5);
+                        \draw [very thick, draw=blue] (7.5, 0.5) -- (9, 5);
+                        \draw [very thick] (6,-4) -- (6, -5);
+                    
+                    \end{tikzpicture}
+                \end{center}
             \end{onlyenv}
 
             \begin{onlyenv}<3>
-            \begin{center}
-            \begin{tikzpicture}
-            [scale=0.35,auto=left,every node/.style={circle}]%,fill=blue!20}]
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (1, 7) {};
-              \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](b) at (3, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (5, 7) {};
-              \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (7, 7) {};
-              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](e) at (9, 7) {};
-              \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](f) at (11, 7) {};
-
-              \draw [very thick] (a) -- (3,5) -- (4,6) -- (c);
-              \draw [very thick] (4,6) -- (3.5, 6.5);
-              \draw [very thick, draw=blue] (3.5, 6.5) -- (b);
-              \draw [very thick, draw=blue] (d) -- (9,5) -- (10,6) -- (f);
-              \draw [very thick, draw=blue] (10,6) -- (9.5, 6.5);
-              \draw [very thick] (9.5, 6.5) -- (e);
-              \draw [very thick] (3,5) -- (6,-4) -- (7.5, 0.5);
-              \draw [very thick, draw=blue] (7.5, 0.5) -- (9, 5);
-              \draw [very thick] (6,-4) -- (6, -5);
-            
-            \end{tikzpicture}
-            \end{center}
+                \begin{center}
+                    \begin{tikzpicture}
+                    [scale=0.35,auto=left,every node/.style={circle}]%,fill=blue!20}]
+                        \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (1, 7) {};
+                        \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](b) at (3, 7) {};
+                        \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (5, 7) {};
+                        \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (7, 7) {};
+                        \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](e) at (9, 7) {};
+                        \node [inode, color=blue, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](f) at (11, 7) {};
+          
+                        \draw [very thick] (a) -- (3,5) -- (4,6) -- (c);
+                        \draw [very thick] (4,6) -- (3.5, 6.5);
+                        \draw [very thick, draw=blue] (3.5, 6.5) -- (b);
+                        \draw [very thick, draw=blue] (d) -- (9,5) -- (10,6) -- (f);
+                        \draw [very thick, draw=blue] (10,6) -- (9.5, 6.5);
+                        \draw [very thick] (9.5, 6.5) -- (e);
+                        \draw [very thick] (3,5) -- (6,-4) -- (7.5, 0.5);
+                        \draw [very thick, draw=blue] (7.5, 0.5) -- (9, 5);
+                        \draw [very thick] (6,-4) -- (6, -5);
+                    
+                    \end{tikzpicture}
+                \end{center}
             \end{onlyenv}
     \end{columns}
 \end{frame}
@@ -129,6 +129,385 @@
 % Linneaus formalized this
 % Evolution gave the framework behind why hiearchies were intuitive
 
+\begin{frame}
+    \frametitle{Tree terminology}
+    \begin{center}
+        \begin{tikzpicture}
+        [xscale=0.75,yscale=0.55,auto=left,every node/.style={circle}]%,fill=blue!20}]
+            \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (1, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](b) at (3, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (5, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (7, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](e) at (9, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](f) at (11, 7) {};
+            \node [inode](bc) at (4, 5)  {};
+            \node [inode](ef) at (10, 5)  {};
+            \node [inode](abc) at (3, 3)  {};
+            \node [inode] (abcd) at (4, 1)  {};
+            \node [inode](r) at (6, -3)  {};
+          
+            \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d,r/abcd,r/ef,ef/e,ef/f}
+                \draw [very thick] (\from) -- (\to);
+            
+            \draw [thick, <-] (2.9, 2.9) -- (2.4, 2.4) node[align=right, left] {\sffamily internal node};
+            \draw [thick, <-] (8.1, 0.9) -- (8.6, 0.4) node[align=left, right] {\sffamily branch};
+            \draw [thick, <-] (11.1, 6.9) -- (11.6, 6.4) node[align=left, right] {\sffamily terminal node \\(or leaf, tip)};
+            \draw [thick, <-] (5.9, -3.1) -- (5.4, -3.6) node[align=right, left] {\sffamily root node};
+        
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Tree terminology}
+    \begin{description}
+        \item[Terminal nodes]
+            Also called ``leaves'', ``tips,'' or ``taxa.''
+            These represent our observations (data).
+            Depending on the study, this could be a species, population,
+            individual organism, or a gene.
+        \item[Internal nodes]
+            These represent ancestors of leaves.
+            These are typically not observed.
+            Again, these could be an ancestral species, population,
+            organism, gene, etc.
+        \item[Root node]
+            The most recent common ancestor (MRCA) of all the tips.
+            Sometimes the root node is not known or estimated, and so
+            you will often see trees "unrooted."
+        \item[branches]
+            These represent topology, or the relationships among the nodes.
+            Also, sometimes the length of the branches represent the amount
+            of evolutionary change or duration of time.
+    \end{description}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Interpretting trees}
+    \uncover<2->{These trees are the same! The proximity of the tips does not matter, you
+    have to follow the branches to interpret the relationships.}
+    \vspace{-1cm}
+    \begin{columns}[c]
+        \column{.5\textwidth}
+        \begin{center}
+            \begin{tikzpicture}
+            [xscale=0.5,yscale=0.55,auto=left,every node/.style={circle}]%,fill=blue!20}]
+              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (1, 7) {};
+              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](b) at (3, 7) {};
+              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (5, 7) {};
+              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (7, 7) {};
+              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](e) at (9, 7) {};
+              \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](f) at (11, 7) {};
+              \node [inode](bc) at (4, 5)  {};
+              \node [inode](ef) at (10, 5)  {};
+              \node [inode](abc) at (3, 3)  {};
+              \node [inode] (abcd) at (4, 1)  {};
+              \node [inode](r) at (6, -3)  {};
+            
+              \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d,r/abcd,r/ef,ef/e,ef/f}
+                \draw [very thick] (\from) -- (\to);
+              
+            \end{tikzpicture}
+        \end{center}
+        \column{.5\textwidth}
+        \begin{center}
+            \begin{tikzpicture}
+            [xscale=0.5,yscale=0.55,auto=left,every node/.style={circle}]%,fill=blue!20}]
+                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (7, 7) {};
+                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](b) at (3, 7) {};
+                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (5, 7) {};
+                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (1, 7) {};
+                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](e) at (9, 7) {};
+                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](f) at (11, 7) {};
+                \node [inode](bc) at (4, 5)  {};
+                \node [inode](ef) at (10, 5)  {};
+                \node [inode](abc) at (5, 3)  {};
+                \node [inode] (abcd) at (4, 1)  {};
+                \node [inode](r) at (6, -3)  {};
+              
+                \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d,r/abcd,r/ef,ef/e,ef/f}
+                    \draw [very thick] (\from) -- (\to);
+              
+            \end{tikzpicture}
+        \end{center}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Interpretting rooted vs unrooted trees}
+    \uncover<2->{\raggedleft Where should the root go?}
+    \vspace{-0.5cm}
+    \begin{columns}[c]
+        \column{.5\textwidth}
+        \begin{center}
+            \begin{tikzpicture}
+            [xscale=0.4,yscale=0.55,auto=left,every node/.style={circle}]%,fill=blue!20}]
+                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries A}](a) at (1, 7) {};
+                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries B}](b) at (3, 7) {};
+                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries C}](c) at (5, 7) {};
+                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries D}](d) at (7, 7) {};
+                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries E}](e) at (9, 7) {};
+                \node [inode, color=black, label={[label distance=-5pt]90:\small\sffamily\bfseries F}](f) at (11, 7) {};
+                \node [inode](bc) at (4, 5)  {};
+                \node [inode](ef) at (10, 5)  {};
+                \node [inode](abc) at (3, 3)  {};
+                \node [inode] (abcd) at (4, 1)  {};
+                \node [inode](r) at (6, -3)  {};
+              
+                \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d,r/abcd,r/ef,ef/e,ef/f}
+                    \draw [very thick] (\from) -- (\to);
+              
+            \end{tikzpicture}
+        \end{center}
+        \column{.5\textwidth}
+        \begin{center}
+            \begin{tikzpicture}
+            [xscale=0.35, yscale=0.6, auto=left,every node/.style={circle}]%,fill=blue!20}]
+                \node [tnode](d) at (1,10.5) {C};
+                \node [tnode](a) at (3,11) {B};
+                \node [tnode](c) at (3,6) {A};
+                \node [tnode](e) at (13,10) {E};
+                \node [tnode](f) at (16,7) {F};
+                \node [tnode](b) at (14,2) {D};
+                \node [inode](ef) at (13,9) {};
+                \node [inode](efb) at (12, 8) {};
+                \node [inode](adc) at (4,7) {};
+                \node [inode](ad) at (2, 10) {};
+              
+                \foreach \from/\to in {efb/ef,efb/b,adc/c,adc/efb,ad/a,ad/d,ad/adc,ef/e,ef/f}
+                    \draw [very thick] (\from) -- (\to);
+                \uncover<3->{\draw [very thick, <-] (12.4, 8.6) -- (11.4, 9.6);}
+            
+            \end{tikzpicture}
+        \end{center}
+    \end{columns}
+\end{frame}
+                
+\begin{frame}
+    \frametitle{Tree branch lengths}
+    \vspace{-0.25cm}
+    \begin{description}
+        \item[Cladogram] A phylogenetic tree where branches only depict
+            relationships; branch \textbf{lengths} have no meaning.  Methods
+            that produce cladograms usually estimate \textbf{unrooted} trees; the
+            root is assumed or implied via an outgroup.
+    \end{description}
+    \begin{figure}
+        \begin{center}
+            \includegraphics[width=0.65\textwidth]{../images/crocodylia-species-tree-cladogram.pdf}
+        \end{center}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Tree branch lengths}
+    \vspace{-0.25cm}
+    \begin{description}
+        \item[Phylogram] {\small A phylogenetic tree with branch lengths that are
+            proportional to the amount of evolutionary change.  Methods that
+            produce phylograms usually estimate \textbf{unrooted} trees; the
+        root is assumed or implied via an outgroup.}
+    \end{description}
+    \begin{figure}
+        \begin{center}
+            \includegraphics[width=0.65\textwidth]{../images/crocodylia-ml.pdf}
+        \end{center}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Tree branch lengths}
+    \vspace{-0.25cm}
+    \begin{description}
+        \item[Chronogram] A phylogenetic tree with branch lengths that are
+            proportional to time duration. Methods that produce chronograms
+            estimate \textbf{rooted} trees.
+    \end{description}
+    \begin{figure}
+        \begin{center}
+            \includegraphics[width=0.7\textwidth]{../images/crocodylia-species-tree-square.pdf}
+        \end{center}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Style of presentation varies a lot}
+    \begin{center}
+        \includegraphics<1>[width=0.8\textwidth]{../images/crocodylia-species-tree-square.pdf}
+        \includegraphics<2>[width=0.8\textwidth]{../images/crocodylia-species-tree-round.pdf}
+        \includegraphics<3>[width=0.8\textwidth]{../images/crocodylia-species-tree-triangle.pdf}
+        \includegraphics<4>[width=0.8\textwidth]{../images/crocodylia-species-tree-circle.pdf}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Classification: Grouping leaves---the good}
+    \begin{description}
+        \item[Monophyletic group] A group that consists of an ancestor and all
+            of its descendants. Also called a clade or ``natural'' group. The
+            basis of phylogenetic classification. Good!
+    \end{description}
+    \vspace{-0.25cm}
+    \begin{center}
+        \begin{onlyenv}<1>
+        \begin{tikzpicture}
+        [xscale=0.75,yscale=0.55,auto=left,every node/.style={circle}]%,fill=blue!20}]
+            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{A}}](a) at (1, 7) {};
+            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{B}}](b) at (3, 7) {};
+            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{C}}](c) at (5, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries D}](d) at (7, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries E}](e) at (9, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries F}](f) at (11, 7) {};
+            \node [inode, color=green](bc) at (4, 5)  {};
+            \node [inode](ef) at (10, 5)  {};
+            \node [inode, color=green](abc) at (3, 3)  {};
+            \node [inode] (abcd) at (4, 1)  {};
+            \node [inode](r) at (6, -3)  {};
+          
+            \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a}
+                \draw [ultra thick, color=green] (\from) -- (\to);
+            \foreach \from/\to in {abcd/abc,abcd/d,r/abcd,r/ef,ef/e,ef/f}
+                \draw [ultra thick] (\from) -- (\to);
+            
+        \end{tikzpicture}
+        \end{onlyenv}
+        \begin{onlyenv}<2>
+        \begin{tikzpicture}
+        [xscale=0.75,yscale=0.55,auto=left,every node/.style={circle}]%,fill=blue!20}]
+            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{A}}](a) at (1, 7) {};
+            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{B}}](b) at (3, 7) {};
+            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{C}}](c) at (5, 7) {};
+            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{D}}](d) at (7, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries E}](e) at (9, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries F}](f) at (11, 7) {};
+            \node [inode, color=green](bc) at (4, 5)  {};
+            \node [inode](ef) at (10, 5)  {};
+            \node [inode, color=green](abc) at (3, 3)  {};
+            \node [inode, color=green] (abcd) at (4, 1)  {};
+            \node [inode](r) at (6, -3)  {};
+          
+            \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d}
+                \draw [ultra thick, color=green] (\from) -- (\to);
+            \foreach \from/\to in {r/abcd,r/ef,ef/e,ef/f}
+                \draw [ultra thick] (\from) -- (\to);
+            
+        \end{tikzpicture}
+        \end{onlyenv}
+        \begin{onlyenv}<3>
+        \begin{tikzpicture}
+        [xscale=0.75,yscale=0.55,auto=left,every node/.style={circle}]%,fill=blue!20}]
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries A}](a) at (1, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries B}](b) at (3, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries C}](c) at (5, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries D}](d) at (7, 7) {};
+            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{E}}](e) at (9, 7) {};
+            \node [inode, color=green, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{green}{F}}](f) at (11, 7) {};
+            \node [inode](bc) at (4, 5)  {};
+            \node [inode, color=green](ef) at (10, 5)  {};
+            \node [inode](abc) at (3, 3)  {};
+            \node [inode] (abcd) at (4, 1)  {};
+            \node [inode](r) at (6, -3)  {};
+          
+            \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d,r/abcd,r/ef}
+                \draw [ultra thick] (\from) -- (\to);
+            \foreach \from/\to in {ef/e,ef/f}
+                \draw [ultra thick, color=green] (\from) -- (\to);
+            
+        \end{tikzpicture}
+        \end{onlyenv}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Classification: Grouping leaves---the bad}
+    \begin{description}
+        \item[Paraphyletic group] A group that consists of an ancestor and
+            some, but not all, of its descendants. Need to add one clade or tip
+            to get monophyly. An ``unnatural'' group. Bad!
+    \end{description}
+    \vspace{-0.25cm}
+    \begin{center}
+        \begin{onlyenv}<1>
+        \begin{tikzpicture}
+        [xscale=0.75,yscale=0.55,auto=left,every node/.style={circle}]%,fill=blue!20}]
+            \node [inode, label={[label distance=-5pt]90:\sffamily\bfseries A}](a) at (1, 7) {};
+            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{B}}](b) at (3, 7) {};
+            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{C}}](c) at (5, 7) {};
+            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{D}}](d) at (7, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries E}](e) at (9, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries F}](f) at (11, 7) {};
+            \node [inode, color=red](bc) at (4, 5)  {};
+            \node [inode](ef) at (10, 5)  {};
+            \node [inode, color=red](abc) at (3, 3)  {};
+            \node [inode, color=red] (abcd) at (4, 1)  {};
+            \node [inode](r) at (6, -3)  {};
+          
+            \foreach \from/\to in {bc/b,bc/c,abc/bc,abcd/abc,abcd/d}
+                \draw [ultra thick, color=red] (\from) -- (\to);
+            \foreach \from/\to in {r/abcd,r/ef,ef/e,ef/f,abc/a}
+                \draw [ultra thick] (\from) -- (\to);
+            
+        \end{tikzpicture}
+        \end{onlyenv}
+        \begin{onlyenv}<2>
+        \begin{tikzpicture}
+        [xscale=0.75,yscale=0.55,auto=left,every node/.style={circle}]%,fill=blue!20}]
+            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{A}}](a) at (1, 7) {};
+            \node [inode, label={[label distance=-5pt]90:\sffamily\bfseries B}](b) at (3, 7) {};
+            \node [inode, label={[label distance=-5pt]90:\sffamily\bfseries C}](c) at (5, 7) {};
+            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{D}}](d) at (7, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries E}](e) at (9, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries F}](f) at (11, 7) {};
+            \node [inode](bc) at (4, 5)  {};
+            \node [inode](ef) at (10, 5)  {};
+            \node [inode, color=red](abc) at (3, 3)  {};
+            \node [inode, color=red] (abcd) at (4, 1)  {};
+            \node [inode](r) at (6, -3)  {};
+          
+            \foreach \from/\to in {abc/a,abcd/abc,abcd/d}
+                \draw [ultra thick, color=red] (\from) -- (\to);
+            \foreach \from/\to in {abc/bc,bc/b,bc/c,r/abcd,r/ef,ef/e,ef/f}
+                \draw [ultra thick] (\from) -- (\to);
+            
+        \end{tikzpicture}
+        \end{onlyenv}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Classification: Grouping leaves---the ugly}
+    \begin{description}
+        \item[Polyphyletic group] A group that consists of unrelated tips. Need
+            to add more than one clade or tip to get monophyly. An
+            ``unnatural'' group. Ugly!
+    \end{description}
+    \vspace{-0.25cm}
+    \begin{center}
+        \begin{onlyenv}<1>
+        \begin{tikzpicture}
+        [xscale=0.75,yscale=0.55,auto=left,every node/.style={circle}]%,fill=blue!20}]
+            \node [inode, label={[label distance=-5pt]90:\sffamily\bfseries A}](a) at (1, 7) {};
+            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{B}}](b) at (3, 7) {};
+            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{C}}](c) at (5, 7) {};
+            \node [inode, label={[label distance=-5pt]90:\sffamily\bfseries D}](d) at (7, 7) {};
+            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{E}}](e) at (9, 7) {};
+            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{F}}](f) at (11, 7) {};
+            \node [inode, color=red](bc) at (4, 5)  {};
+            \node [inode, color=red](ef) at (10, 5)  {};
+            \node [inode](abc) at (3, 3)  {};
+            \node [inode] (abcd) at (4, 1)  {};
+            \node [inode](r) at (6, -3)  {};
+          
+            \foreach \from/\to in {bc/b,bc/c,ef/e,ef/f}
+                \draw [ultra thick, color=red] (\from) -- (\to);
+            \foreach \from/\to in {r/abcd,r/ef,abc/a,abc/bc,abcd/abc,abcd/d}
+                \draw [ultra thick] (\from) -- (\to);
+            
+        \end{tikzpicture}
+        \end{onlyenv}
+    \end{center}
+\end{frame}
 %TERMINOLOGY
 % Tree anatomy stuff
     % branches tips nodes etc

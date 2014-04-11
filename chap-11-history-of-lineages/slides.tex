@@ -35,16 +35,71 @@
 
 \begin{frame}
     \frametitle{Acknowledgements}
+    Some of the slides and images were stolen (with permission) from Dr. Mark Holder.
+\end{frame}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Why phylogenetics is important?}
+\section{What is phylogenetics?}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \frametitle{Phylogenetics}
+    \begin{description}
+        \item[Systematics] The science devoted to study of the diversity of
+            organisms, and the relationships among them.
+        \item[Classification] The ordering of organisms into named groups on
+            the basis of their relationships.
+        \item[Phylogenetics] The science of inferring the genealogical
+            relationships between species.
+    \end{description}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Why is phylogenetics important?}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
-    \frametitle{Bergmann's Rule}
+    \frametitle{Why is phylogenetics important?}
+    \begin{quote}
+    Seen in the light of evolution, biology is, perhaps, intellectually the
+    most satisfying and inspiring science. Without that light it becomes a pile
+    of sundry facts some of them interesting or curious but making no
+    meaningful picture as a whole.
+    \end{quote}
+
+    \myHangIndent
+    - Dobzhansky, T. (1973). Nothing in biology makes sense except in the light
+    of evolution. The American Biology Teacher 35:125--129.
+
+    \bigskip
+
+    \begin{quote}
+    \ldots nothing in evolution makes sense except in the light of phylogeny \ldots
+    \end{quote}
+
+    \myHangIndent
+    - Society of Systematic Biologists
+\end{frame}
+
+\begin{frame}
+    \frametitle{Why is phylogenetics important?}
+    We cannot understand biodiversity without its blueprint: the tree of life.
+    \begin{figure}
+        \begin{center}
+        \includegraphics[width=0.6\textwidth]{../images/treeoflife.jpg}
+        \end{center}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Why is phylogenetics important?}
     \begin{columns}[c]
         \column{.5\textwidth}
+        Bergmann's Rule
             \begin{onlyenv}<1->
                 \begin{center}
                     \begin{tikzpicture}
@@ -115,19 +170,15 @@
     \end{columns}
 \end{frame}
 
-% what is phylogenetics
-% why phylogenetics is important
-%     nothing in biology dob quote
-%     Seen in the light of evolution, biology is, perhaps, intellectually the
-%     most satisfying and inspiring science. Without that light it becomes a pile
-%     of sundry facts some of them interesting or curious but making no
-%     meaningful picture as a whole.
-%     Dobzhansky, T. (1973). Nothing in biology makes sense except in the light of evolution. The American Biology Teacher 35:125--129.
-%     ... nothing in evolution makes sense except in the light of phylogeny... SSB (http://systbio.org/teachevolution.html)
-%     impossible to understand biodiversity without framework
-%     biogeog
-%         ecological biogeog -- independent contrast stuff
-%         understanding diversification across space and time
+\begin{frame}
+    \frametitle{Why is phylogenetics important?}
+    \begin{itemize}
+        \item Every field of biology studies organisms.
+        \item These organisms are \textbf{not} independent.
+        \item To analyze biological data correctly we need to account for there
+            shared history.
+    \end{itemize}
+\end{frame}
 
 % Classification before phylogeny -- been classifying stuff since hg days -> tends to form hiearchies
 % Linneaus formalized this
@@ -136,6 +187,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Tree and character terminology and basics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents[currentsection]
+\end{frame}
 
 \begin{frame}
     \frametitle{Tree terminology}
@@ -180,18 +236,18 @@
             Again, these could be an ancestral species, population,
             organism, gene, etc.
         \item[Root node]
-            The most recent common ancestor (MRCA) of all the tips.
-            Sometimes the root node is not known or estimated, and so
-            you will often see trees "unrooted."
+            The most recent common ancestor (MRCA) of all the tips.  Sometimes
+            the root node is not known or estimated, and so you will often see
+            trees ``unrooted.''
         \item[branches]
             These represent topology, or the relationships among the nodes.
-            Also, sometimes the length of the branches represent the amount
-            of evolutionary change or duration of time.
+            Sometimes the length of the branches represent the amount of
+            evolutionary change or duration of time.
     \end{description}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Interpretting trees}
+    \frametitle{Interpreting trees}
     \uncover<2->{These trees are the same! The proximity of the tips does not matter, you
     have to follow the branches to interpret the relationships.}
     \vspace{-1cm}
@@ -243,7 +299,7 @@
 
 
 \begin{frame}
-    \frametitle{Interpretting rooted vs unrooted trees}
+    \frametitle{Interpreting rooted vs unrooted trees}
     \uncover<2->{\raggedleft Where should the root go?}
     \vspace{-0.5cm}
     \begin{columns}[c]
@@ -520,8 +576,8 @@
 \begin{frame}
     \frametitle{Other terms}
     \begin{description}
-        \item[Ingroup] The clade (monophyletic group) of taxa that are focus of
-            a study (e.g., A, B, and C below).
+        \item[Ingroup] The clade (monophyletic group) of taxa that is the
+            focus of a study (e.g., A, B, and C below).
         \item[Outgroup] All other taxa outside of the ingroup clade (e.g., D,
             E, and F below).
     \end{description}
@@ -843,10 +899,15 @@ Terms:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{History of Phylogenetics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents[currentsection]
+\end{frame}
         
 \begin{frame}
     \frametitle{A (very) brief history of Systematics} 
-    Three schools:
+    % Three schools:
     \begin{description}
         \item[Evolutionary phylogenetics] Very subjective and recognized those
             icky paraphyletic groups. Still remnants of its long legacy in the
@@ -863,47 +924,223 @@ Terms:
             vehemently opposed to statistical inference.
             Does not deal with homoplastic characters well (they violate the
             logic).
-% History -- three schools
-    % Evol systematics
-        % key point: very subjective and recognized paraphyletic groups
-        % was very popular and legacy remains... many paraphyletic groups (fish, reptiles)
-    
-    % Numerical phenetics/taxonomy
-        % sought objective, quantitative methods.
-        % quantitiative clustering algorithms cluster taxa based on similarity of phenotypic traits.
-        % resulted in paraphyletic/polyphyletic groups due to similarity among convergence
-        % math / algorithms produced are still very useful for multivariate stats
+    \end{description}
+\end{frame}
 
-    % Phylogenetic systematics / Cladistics
-        % hennigian logic (mth lec 4)
-        % logical inference: premises -> rules -> statement
-        % premise: we can code characters
-        % taxa that share a character state must be more closely related
-        % Brief example
-        % Later was parsimony method
-        % no logical way to account for homoplasies -- need an error model!
+\begin{frame}
+    \frametitle{Cladistics: Hennigian logical inference}
+\begin{table}[htdp]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline 
+ & \multicolumn{10}{c|}{Character \#} \\ 
+Taxon &\color{blue} 1 & \color{blue} 2 & \color{blue} 3 & \color{blue} 4 & \color{blue} 5 & \color{green} 6 & \color{green} 7 & \color{green} 8 & \color{green} 9 & \color{red} 10  \\ 
+\hline 
+A &    \color{blue} 0 & \color{blue} 0 & \color{blue} 0 & \color{blue} 0 & \color{blue} 0 & \color{green} 0 & \color{green} 0 & \color{green} 0 & \color{green} 0 & \color{red} 0 \\
+B &    \color{blue} 1 & \color{blue} 0 & \color{blue} 0 & \color{blue} 0 & \color{blue} 0 & \color{green} 1 & \color{green} 1 & \color{green} 1 & \color{green} 1 & \color{red} 1 \\
+C &    \color{blue} 0 & \color{blue} 1 & \color{blue} 1 & \color{blue} 1 & \color{blue} 0 & \color{green} 1 & \color{green} 1 & \color{green} 1 & \color{green} 1 & \color{red} 1 \\
+D &    \color{blue} 0 & \color{blue} 0 & \color{blue} 0 & \color{blue} 0 & \color{blue} 1 & \color{green} 1 & \color{green} 1 & \color{green} 1 & \color{green} 1 & \color{red} 0 \\
+\hline 
+\end{tabular}
+\end{center}
+\end{table}
+\end{frame}
 
-% Methods
-    % not going to dwell on Hennig... important then... not so much now.
-    % Current methods are statistical (model-based).
+\begin{frame}
+    \frametitle{Cladistics: Hennigian logical inference}
+    \vspace{-3cm}
+\begin{table}[htdp]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline 
+ & \multicolumn{12}{c|}{Character \#} \\ 
+Taxon &\color{blue} 1 & \color{blue} 2 & \color{blue} 3 & \color{blue} 4 & \color{blue} 5 & \color{green} 6 & \color{green} 7 & \color{green} 8 & \color{green} 9 & \color{red} 10 & \color{red} 11 &  \color{red} 12   \\ 
+\hline 
+A & \color{blue} 0 & \color{blue} 0 & \color{blue} 0 & \color{blue} 0 & \color{blue} 0 & \color{green} 0 & \color{green} 0 & \color{green} 0 & \color{green} 0 & \color{red} 0 & \color{red} 0 & \color{red} 0  \\
+B & \color{blue} 1 & \color{blue} 0 & \color{blue} 0 & \color{blue} 0 & \color{blue} 0 & \color{green} 1 & \color{green} 1 & \color{green} 1 & \color{green} 1 & \color{red} 1 & \color{red} 1 & \color{red} 1 \\
+C &    \color{blue} 0 & \color{blue} 1 & \color{blue} 1 & \color{blue} 1 & \color{blue} 0 & \color{green} 1 & \color{green} 1 & \color{green} 1 & \color{green} 1 & \color{red} 1 & \color{red} 1 & \color{red} 0\\
+D &    \color{blue} 0 & \color{blue} 0 & \color{blue} 0 & \color{blue} 0 & \color{blue} 1 & \color{green} 1 & \color{green} 1 & \color{green} 1 & \color{green} 1 & \color{red} 0 & \color{red} 0 & \color{red} 1\\
+\hline 
+\end{tabular}
+\end{center}
+\end{table}
+\begin{center}
+\begin{picture}(-90,0)(-20,0)
+	\thicklines
+	\put(16,17){B} 
+	\put(34,-53){C} 
+	\put(-26,-93){D}
+	\put(-30,20){\line(1,0){40}} 
+	\put(-30,-50){\line(1,0){60}} 
+	\put(-30,-50){\line(0,1){70}} 
+	\put(-70,-10){\line(1,0){40}} 
+	\put(-70,-90){\line(1,0){40}} 
+	\put(-70,-90){\line(0,1){80}} 
+	\put(-150,-50){\line(1,0){80}}
+	\put(-150,-120){\line(1,0){10}} 
+	\put(-150,-120){\line(0,1){70}} 
+	\put(-136,-123){A} 
+	% \put(50,7){B C} 
+    \uncover<2->{
+	\put(-20,17){\color{blue} \line(0,1){6}}
+	\put(-22,7){\color{blue}1}
+	\put(-20,17){\color{blue} \line(0,1){6}}
+	\put(-22,7){\color{blue}1}
+	\put(-13,-53){\color{blue} \line(0,1){6}}
+	\put(-4,-53){\color{blue} \line(0,1){6}}
+	\put(5,-53){\color{blue} \line(0,1){6}}
+	\put(-15,-63){\color{blue}2 3 4}
+	\put(-60,-93){\color{blue} \line(0,1){6}}
+	\put(-62,-103){\color{blue}5}
+    }
+    \uncover<5->{
+	\put(-6,17){\color{red} \line(0,1){6}}
+	\put(-10,7){\color{red}12}
+	\put(-46,-93){\color{red} \line(0,1){6}}
+	\put(-50,-103){\color{red}12}
+    }
+    \uncover<4->{
+	\put(-60,-13){\color{red} \line(0,1){6}}
+	\put(-48,-13){\color{red} \line(0,1){6}}
+	\put(-66,-23){\color{red}10}
+	\put(-52,-23){\color{red}11}
+    }
+    \uncover<3->{
+	\put(-123,-53){\color{green} \line(0,1){6}}
+	\put(-113,-53){\color{green} \line(0,1){6}}
+	\put(-104,-53){\color{green} \line(0,1){6}}
+	\put(-95,-53){\color{green} \line(0,1){6}}
+	\put(-125,-63){\color{green}6 7 8 9}
+    }
+	% \put(55,10){\oval(30,20)} 
+	% \put(55,-10){D} 
+	% \put(65,5){\oval(60,40)} 
+	% \put(55,-27){A}
+\end{picture}
+\end{center}
+\end{frame}
 
-% Molecular phylogenetics
-    % Early indirect approaches to measuring changes in DNA
-        % immunological assays
-        % protein electrophoresis
-        % DNA-DNA hybridization
-        % restriction enzymes
-    % PCR and sequencing game changer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Phylogenetic Methods}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Molecular evolution
-    % DNA - 4 character states
-        % redundancy of code
-        % transition/transversion bias
-        % very conducive to modeling
-        % different rates across genome -- conducive for resolving trees at different timescales
-    % Phylogenomics
-    % total evidence
-    % morph character mapping
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+    \frametitle{Phylogenetic Methods}
+    \begin{description}
+        \item[Distance-based methods] Group tips based on some measure of
+            evolutionary distance.
+            Very fast.
+            Have to ``distill'' discrete characters to distances (throwing away
+            information).
+        \item[Parsimony] Search for the tree(s) that require the smallest
+            number of character-state changes (Occam's razor).
+            Not explicitly statistical.
+            Only uses some of the characters.
+            We know it can be positively misleading.
+        \item[Statistical Inference] Use probabilistic models of character
+            evolution.  Can use all of the data. More robust and can quantify
+            uncertainty.
+            \begin{description}
+                \item[Maximum likelihood] Find the tree that maximizes the
+                    probability of the observed data.
+                \item[Bayesian inference] Find the distribution of trees
+                    with the highest probability given the data.
+            \end{description}
+    \end{description}
+\end{frame}
+
+\subsection{Molecular Evolution}
+
+% \begin{frame}
+% \frametitle{Outline}
+% \tableofcontents[currentsection]
+% \end{frame}
+
+\begin{frame}
+    \frametitle{Molecular Evolution}
+    \begin{itemize}
+        \item Earliest approaches attempted to measure changes in DNA
+            indirectly via immunological assays, protein electrophoresis,
+            DNA-DNA hybridization, and restriction enzymes.
+        \item Polymerase chain reaction (PCR) and Sanger sequencing made it
+            possible to observe the character states of the DNA nucleotides
+            directly.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Molecular Evolution---DNA}
+    \begin{itemize}
+        \item DNA is a ``simple'' character; only 4 discrete states (A, C, G
+            \&, T) across the entire tree of life!
+        \item For conserved (slowly evolving) regions, you get homologous
+            characters across bacteria to mammals.
+        \item Yet, rapidly evolving regions are variable among closely
+            related organisms.
+        \item Very conducive for modeling due to the small number of states and
+            similar replication machinery (DNA polymerases) across all life.
+        \item We can now sequence entire genomes (billions of characters!)
+            relatively quickly and cheaply---\textbf{phylogenomics}.
+    \end{itemize}
+\end{frame}
+
+\section{Phylogeography}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+    \frametitle{Phylogeography}
+    \begin{itemize}
+        \item DNA data made it possible to collect characters and estimate gene
+            trees: genealogical relationships among gene copies carried by
+            individual organisms within and among closely related species.
+        \item Bridges gap between phylogenetics and phylogeography.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Phylogeography}
+    \begin{itemize}
+        \item We can now model hierarchical processes of evolution.
+        \begin{itemize}
+            \item Model evolution of nucleotides along gene trees.
+            \item Model genealogical processes within populations.
+            \item Model diversification processes among species.
+            \item Model spatial dynamics of diversification.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\frame[plain]{\includegraphics[page=1,height=\textheight]{../images/wright-fisher-mth.pdf}}
+\frame[plain]{\includegraphics[page=2,height=\textheight]{../images/wright-fisher-mth.pdf}}
+\frame[plain]{\includegraphics[page=3,height=\textheight]{../images/wright-fisher-mth.pdf}}
+\frame[plain]{\includegraphics[page=4,height=\textheight]{../images/wright-fisher-mth.pdf}}
+\frame[plain]{\includegraphics[page=5,height=\textheight]{../images/wright-fisher-mth.pdf}}
+\frame[plain]{\includegraphics[page=1,height=\textheight]{../images/species-tree-slide-mth.pdf}}
+
+\begin{frame}
+    \frametitle{Phylogeography---West Nile Virus}
+    \begin{figure}
+        \begin{center}
+        \includegraphics[width=0.5\textwidth]{../images/pybus-fig2.jpg}
+        \caption{\tiny Pybus et al.\ 2012.}
+        \end{center}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Phylogeography---West Nile Virus}
+    \href{http://www.pnas.org/content/suppl/2012/08/23/1206598109.DCSupplemental/sm01.mp4}{video link}
+\end{frame}
 
 % Phylogeography
     % DNA data allowed for constructing trees of individual organisms (or gene copies) within and among species

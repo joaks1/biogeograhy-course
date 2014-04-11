@@ -37,6 +37,10 @@
     \frametitle{Acknowledgements}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Why phylogenetics is important?}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}
     \frametitle{Bergmann's Rule}
     \begin{columns}[c]
@@ -128,6 +132,10 @@
 % Classification before phylogeny -- been classifying stuff since hg days -> tends to form hiearchies
 % Linneaus formalized this
 % Evolution gave the framework behind why hiearchies were intuitive
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tree and character terminology and basics}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
     \frametitle{Tree terminology}
@@ -348,7 +356,7 @@
             of its descendants. Also called a clade or ``natural'' group. The
             basis of phylogenetic classification. Good!
     \end{description}
-    \vspace{-0.25cm}
+    \vspace{-0.45cm}
     \begin{center}
         \begin{onlyenv}<1>
         \begin{tikzpicture}
@@ -508,18 +516,353 @@
         \end{onlyenv}
     \end{center}
 \end{frame}
-%TERMINOLOGY
-% Tree anatomy stuff
-    % branches tips nodes etc
-    % monophyly poly para etc.
-    % branch rotation
 
-% character terms
-    % homology (shared due to no change) / homoplasy ("same change" has more than once; shared due to changes)
-        % homologous
-            % plesio / apo morphy
-            % synapo /symplesio
+\begin{frame}
+    \frametitle{Other terms}
+    \begin{description}
+        \item[Ingroup] The clade (monophyletic group) of taxa that are focus of
+            a study (e.g., A, B, and C below).
+        \item[Outgroup] All other taxa outside of the ingroup clade (e.g., D,
+            E, and F below).
+    \end{description}
+    \vspace{-0.5cm}
+    \begin{center}
+        \begin{onlyenv}<1>
+        \begin{tikzpicture}
+        [xscale=0.75,yscale=0.55,auto=left,every node/.style={circle}]%,fill=blue!20}]
+            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{A}}](a) at (1, 7) {};
+            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{B}}](b) at (3, 7) {};
+            \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{C}}](c) at (5, 7) {};
+            \node [inode, label={[label distance=-5pt]90:\sffamily\bfseries D}](d) at (7, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{black}{E}}](e) at (9, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{black}{F}}](f) at (11, 7) {};
+            \node [inode, color=red](bc) at (4, 5)  {};
+            \node [inode, color=black](ef) at (10, 5)  {};
+            \node [inode, color=red](abc) at (3, 3)  {};
+            \node [inode] (abcd) at (4, 1)  {};
+            \node [inode](r) at (6, -3)  {};
+          
+            \foreach \from/\to in {abc/a,abc/bc,bc/b,bc/c}
+                \draw [ultra thick, color=red] (\from) -- (\to);
+            \foreach \from/\to in {r/abcd,r/ef,abcd/abc,abcd/d,ef/e,ef/f}
+                \draw [ultra thick] (\from) -- (\to);
+            
+        \end{tikzpicture}
+        \end{onlyenv}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Other terms}
+    \begin{description}
+        \item[Sister group] The next most closely related tip or clade; always
+            reciprocal. E.g., in the tree below, B is sister to C (and vice
+            versa), the clade of B and C is sister to A (and vice versa), D is
+            sister to the clade comprised of A, B, and C (and vice versa).
+    \end{description}
+    \vspace{-0.5cm}
+    \begin{center}
+        \begin{onlyenv}<1>
+        \begin{tikzpicture}
+        [xscale=0.75,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{black}{A}}](a) at (1, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{black}{B}}](b) at (3, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{black}{C}}](c) at (5, 7) {};
+            \node [inode, label={[label distance=-5pt]90:\sffamily\bfseries D}](d) at (7, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{black}{E}}](e) at (9, 7) {};
+            \node [inode, color=black, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{black}{F}}](f) at (11, 7) {};
+            \node [inode, color=black](bc) at (4, 5)  {};
+            \node [inode, color=black](ef) at (10, 5)  {};
+            \node [inode, color=black](abc) at (3, 3)  {};
+            \node [inode] (abcd) at (4, 1)  {};
+            \node [inode](r) at (6, -3)  {};
+          
+            \foreach \from/\to in {abc/a,abc/bc,bc/b,bc/c}
+                \draw [ultra thick, color=black] (\from) -- (\to);
+            \foreach \from/\to in {r/abcd,r/ef,abcd/abc,abcd/d,ef/e,ef/f}
+                \draw [ultra thick] (\from) -- (\to);
+            
+        \end{tikzpicture}
+        \end{onlyenv}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Character matrices}
+\begin{table}[htdp]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+&  & \multicolumn{6}{c|}{Characters} \\
+& & 1 & 2 & 3 & 4 & 5 & 6 \\
+\hline
+\multirow{3}{*}{Taxa} & {\em Homo sapiens} & 0.13 & A & A & rounded & 1 & 1610 - 1755 \\
+ & {\em Pan paniscus} & 0.34 & A & G & flat & 0 & 621 - 843 \\
+  & {\em Gorilla gorilla} & 0.46 & C & G & pointed & 0 & 795 - 1362\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+Characters (aka ``transformation series'') are the columns.\\
+The values in the cells are character states (aka ``characters'').\\
+\end{frame}
+
+\begin{frame}
+    \frametitle{Charater terminology}
+    \begin{description}
+        \item[Homology] A character state that is shared among taxa due to
+            inheritance from a common ancestor (identical by descent).
+    \end{description}
+    \vspace{-0.25cm}
+    \begin{onlyenv}<1>
+    \begin{center}
+    \begin{tikzpicture}
+    [xscale=0.75,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{A}}](a) at (1, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{B}}](b) at (3, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{C}}](c) at (5, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{D}}](d) at (7, 7) {};
+        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{E}}](e) at (9, 7) {};
+        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{F}}](f) at (11, 7) {};
+        \node [inode, color=blue](bc) at (4, 5)  {};
+        \node [inode, color=red](ef) at (10, 5)  {};
+        \node [inode, color=blue](abc) at (3, 3)  {};
+        \node [inode, color=blue] (abcd) at (4, 1)  {};
+        \node [inode, color=red](r) at (6, -3)  {};
+      
+        \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d}
+            \draw [ultra thick, color=blue] (\from) -- (\to);
+        \draw [ultra thick, color=red] (r) -- (5, -1);
+        \draw [ultra thick, color=blue] (5, -1) -- (abcd);
+        \foreach \from/\to in {r/ef,ef/e,ef/f}
+            \draw [ultra thick, color=red] (\from) -- (\to);
         
+    \end{tikzpicture}
+    \begin{itemize}
+        \item \textcolor{blue}{Blue} character state is homologous.
+        \item \textcolor{red}{Red} character state is homologous.
+    \end{itemize}
+    \end{center}
+    \end{onlyenv}
+    \begin{onlyenv}<2>
+    \begin{center}
+    \begin{tikzpicture}
+    [xscale=0.75,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
+        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{A}}](a) at (1, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{B}}](b) at (3, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{C}}](c) at (5, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{D}}](d) at (7, 7) {};
+        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{E}}](e) at (9, 7) {};
+        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{F}}](f) at (11, 7) {};
+        \node [inode, color=blue](bc) at (4, 5)  {};
+        \node [inode, color=red](ef) at (10, 5)  {};
+        \node [inode, color=blue](abc) at (3, 3)  {};
+        \node [inode, color=blue] (abcd) at (4, 1)  {};
+        \node [inode, color=blue](r) at (6, -3)  {};
+      
+        \foreach \from/\to in {bc/b,bc/c,abc/bc,abcd/abc,abcd/d}
+            \draw [ultra thick, color=blue] (\from) -- (\to);
+        \draw [ultra thick, color=blue] (abc) -- (2, 5);
+        \draw [ultra thick, color=red] (2, 5) -- (a);
+        \draw [ultra thick, color=blue] (r) -- (5, -1);
+        \draw [ultra thick, color=blue] (5, -1) -- (abcd);
+        \draw [ultra thick, color=blue] (r) -- (8, 1);
+        \draw [ultra thick, color=red] (8, 1) -- (ef);
+        \foreach \from/\to in {ef/e,ef/f}
+            \draw [ultra thick, color=red] (\from) -- (\to);
+        
+    \end{tikzpicture}
+    \begin{itemize}
+        \item \textcolor{blue}{Blue} character state is homologous.
+        \item \textcolor{red}{Red} character state is not!
+    \end{itemize}
+    \end{center}
+    \end{onlyenv}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Charater terminology}
+    \begin{description}
+        \item[Homoplasy] A character state that is shared because of multiple
+            (convergent) changes. Homo = ``same'' plasy = ``change.'' Diagnose
+            polyphyletic groups.
+    \end{description}
+    \vspace{-0.25cm}
+    \begin{onlyenv}<1>
+    \begin{center}
+    \begin{tikzpicture}
+    [xscale=0.75,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
+        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{A}}](a) at (1, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{B}}](b) at (3, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{C}}](c) at (5, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{D}}](d) at (7, 7) {};
+        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{E}}](e) at (9, 7) {};
+        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{F}}](f) at (11, 7) {};
+        \node [inode, color=blue](bc) at (4, 5)  {};
+        \node [inode, color=red](ef) at (10, 5)  {};
+        \node [inode, color=blue](abc) at (3, 3)  {};
+        \node [inode, color=blue] (abcd) at (4, 1)  {};
+        \node [inode, color=blue](r) at (6, -3)  {};
+      
+        \foreach \from/\to in {bc/b,bc/c,abc/bc,abcd/abc,abcd/d}
+            \draw [ultra thick, color=blue] (\from) -- (\to);
+        \draw [ultra thick, color=blue] (abc) -- (2, 5);
+        \draw [ultra thick, color=red] (2, 5) -- (a);
+        \draw [ultra thick, color=blue] (r) -- (5, -1);
+        \draw [ultra thick, color=blue] (5, -1) -- (abcd);
+        \draw [ultra thick, color=blue] (r) -- (8, 1);
+        \draw [ultra thick, color=red] (8, 1) -- (ef);
+        \foreach \from/\to in {ef/e,ef/f}
+            \draw [ultra thick, color=red] (\from) -- (\to);
+        
+    \end{tikzpicture}
+    \begin{itemize}
+        \item \textcolor{red}{Red} character state is homoplasious.
+        \item \textcolor{blue}{Blue} character state is homologous.
+    \end{itemize}
+    \end{center}
+    \end{onlyenv}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hennigian terminology}
+Prefixes:
+\begin{description}
+	\item[apo] Refers to the new or derived state
+	\item[plesio] Refers to the old or primitive state
+    \item[syn or sym] Used to indicate shared between taxa
+    \item[aut] Used to indicate a state being unique to one taxon
+\end{description}
+Terms:
+\begin{description}
+    \item[synapomorphy] Shared, derived states (homologous). Used to diagnose monophyletic groups.
+    \item[symplesiomorphy] Shared, primitive states (homologous). Diagnose icky, unwanted paraphyletic groups.
+    \item[autapomorphy] Unique derived state.
+\end{description}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hennigian terminology}
+    \begin{onlyenv}<1>
+    \begin{center}
+    \begin{tikzpicture}
+    [xscale=0.75,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{A}}](a) at (1, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{B}}](b) at (3, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{C}}](c) at (5, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{D}}](d) at (7, 7) {};
+        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{E}}](e) at (9, 7) {};
+        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{F}}](f) at (11, 7) {};
+        \node [inode, color=blue](bc) at (4, 5)  {};
+        \node [inode, color=red](ef) at (10, 5)  {};
+        \node [inode, color=blue](abc) at (3, 3)  {};
+        \node [inode, color=blue] (abcd) at (4, 1)  {};
+        \node [inode, color=red](r) at (6, -3)  {};
+      
+        \foreach \from/\to in {bc/b,bc/c,abc/bc,abc/a,abcd/abc,abcd/d}
+            \draw [ultra thick, color=blue] (\from) -- (\to);
+        \draw [ultra thick, color=red] (r) -- (5, -1);
+        \draw [ultra thick, color=blue] (5, -1) -- (abcd);
+        \foreach \from/\to in {r/ef,ef/e,ef/f}
+            \draw [ultra thick, color=red] (\from) -- (\to);
+        
+    \end{tikzpicture}
+    \begin{itemize}
+        \item \textcolor{blue}{Blue} character state is synapomorphic.
+    \end{itemize}
+    \end{center}
+    \end{onlyenv}
+    \begin{onlyenv}<2>
+    \begin{center}
+    \begin{tikzpicture}
+    [xscale=0.75,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
+        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{A}}](a) at (1, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{B}}](b) at (3, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{C}}](c) at (5, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{D}}](d) at (7, 7) {};
+        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{E}}](e) at (9, 7) {};
+        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{red}{F}}](f) at (11, 7) {};
+        \node [inode, color=blue](bc) at (4, 5)  {};
+        \node [inode, color=red](ef) at (10, 5)  {};
+        \node [inode, color=blue](abc) at (3, 3)  {};
+        \node [inode, color=blue] (abcd) at (4, 1)  {};
+        \node [inode, color=blue](r) at (6, -3)  {};
+      
+        \foreach \from/\to in {bc/b,bc/c,abc/bc,abcd/abc,abcd/d}
+            \draw [ultra thick, color=blue] (\from) -- (\to);
+        \draw [ultra thick, color=blue] (abc) -- (2, 5);
+        \draw [ultra thick, color=red] (2, 5) -- (a);
+        \draw [ultra thick, color=blue] (r) -- (5, -1);
+        \draw [ultra thick, color=blue] (5, -1) -- (abcd);
+        \draw [ultra thick, color=blue] (r) -- (8, 1);
+        \draw [ultra thick, color=red] (8, 1) -- (ef);
+        \foreach \from/\to in {ef/e,ef/f}
+            \draw [ultra thick, color=red] (\from) -- (\to);
+        
+    \end{tikzpicture}
+    \begin{itemize}
+        \item \textcolor{blue}{Blue} character state is symplesiomorphic.
+    \end{itemize}
+    \end{center}
+    \end{onlyenv}
+    \begin{onlyenv}<3>
+    \begin{center}
+    \begin{tikzpicture}
+    [xscale=0.75,yscale=0.45,auto=left,every node/.style={circle}]%,fill=blue!20}]
+        \node [inode, color=red, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{A}}](a) at (1, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{B}}](b) at (3, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{C}}](c) at (5, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{D}}](d) at (7, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{E}}](e) at (9, 7) {};
+        \node [inode, color=blue, label={[label distance=-5pt]90:\sffamily\bfseries \textcolor{blue}{F}}](f) at (11, 7) {};
+        \node [inode, color=blue](bc) at (4, 5)  {};
+        \node [inode, color=blue](ef) at (10, 5)  {};
+        \node [inode, color=blue](abc) at (3, 3)  {};
+        \node [inode, color=blue] (abcd) at (4, 1)  {};
+        \node [inode, color=blue](r) at (6, -3)  {};
+      
+        \foreach \from/\to in {bc/b,bc/c,abc/bc,abcd/abc,abcd/d}
+            \draw [ultra thick, color=blue] (\from) -- (\to);
+        \draw [ultra thick, color=blue] (abc) -- (2, 5);
+        \draw [ultra thick, color=red] (2, 5) -- (a);
+        \draw [ultra thick, color=blue] (r) -- (5, -1);
+        \draw [ultra thick, color=blue] (5, -1) -- (abcd);
+        \draw [ultra thick, color=blue] (r) -- (8, 1);
+        \draw [ultra thick, color=blue] (8, 1) -- (ef);
+        \foreach \from/\to in {ef/e,ef/f}
+            \draw [ultra thick, color=blue] (\from) -- (\to);
+        
+    \end{tikzpicture}
+    \begin{itemize}
+        \item \textcolor{blue}{red} character state is autapomorphic.
+    \end{itemize}
+    \end{center}
+    \end{onlyenv}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{History of Phylogenetics}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        
+\begin{frame}
+    \frametitle{A (very) brief history of Systematics} 
+    Three schools:
+    \begin{description}
+        \item[Evolutionary phylogenetics] Very subjective and recognized those
+            icky paraphyletic groups. Still remnants of its long legacy in the
+            form of ``traditional'' paraphyletic groups (e.g., fish, reptiles,
+            lizards).
+        \item[Numerical phenetics] Much more objective and quantitative.  Use
+            algorithms to cluster taxa based on similarity of phenotypic
+            characters. Inappropriate use of homoplasious/symplesiomorphic
+            characters often caused paraphyletic/polyphyletic groups.
+        \item[Phylogenetic systematics (cladistics)]
+            Used logical inference to reconstruct relationships based on
+            synapomorphic characters. Won the ``war'' against phenetics in the
+            70--80's. Left many cladists suffering from PTSD that are
+            vehemently opposed to statistical inference.
+            Does not deal with homoplastic characters well (they violate the
+            logic).
 % History -- three schools
     % Evol systematics
         % key point: very subjective and recognized paraphyletic groups

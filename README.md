@@ -18,6 +18,10 @@ of Washington](http://www.washington.edu/).
 Acknowledgements
 ================
 
+Some of the slides and content was borrowed from [Mark
+Holder's](http://phylo.bio.ku.edu/) lectures on [Phylogenetic
+Methods](http://phylo.bio.ku.edu/courses/phylomethods).
+
 
 License
 =======

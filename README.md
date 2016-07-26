@@ -21,6 +21,8 @@ Acknowledgements
 Some of the slides and content was borrowed from [Mark
 Holder's](http://phylo.bio.ku.edu/) lectures on [Phylogenetic
 Methods](http://phylo.bio.ku.edu/courses/phylomethods).
+This work was made possible by funding provided to [Jamie
+Oaks](http://phyletica.org) from the National Science Foundation (DBI 1308885).
 
 
 License
